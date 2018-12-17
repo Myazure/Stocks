@@ -21,6 +21,7 @@ $.getJSON('https://stocks.myazure.org/json/aapl-ohlcv.json', function (data) {
         volume = [],
         dataLength = data.length,
         i = 0;
+
     for (i; i < dataLength; i += 1) {
         ohlc.push([
             data[i][0], // the date
@@ -86,7 +87,7 @@ $.getJSON('https://stocks.myazure.org/json/aapl-ohlcv.json', function (data) {
             }
         },
         series: [{
-            type: 'ohlc',
+            type: 'candlestick',
             id: 'aapl-ohlc',
             name: 'AAPL Stock Price',
             data: ohlc
