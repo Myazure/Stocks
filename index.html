@@ -38,6 +38,94 @@ $.getJSON('https://stocks.myazure.org/json/aapl-ohlcv.json', function (data) {
     }
 
     Highcharts.stockChart('container', {
+	
+	
+	
+	
+	
+	
+	
+	 rangeSelector: {
+        buttonTheme: { // styles for the buttons
+            fill: 'none',
+            stroke: 'none',
+            'stroke-width': 0,
+            r: 8,
+            style: {
+                color: '#039',
+                fontWeight: 'bold'
+            },
+            states: {
+                hover: {
+                },
+                select: {
+                    fill: '#039',
+                    style: {
+                        color: 'white'
+                    }
+                }
+                // disabled: { ... }
+            }
+        },
+		buttons: [{
+			type: 'month',
+			count: 1,
+			text: '1m'
+		}, {
+			type: 'month',
+			count: 3,
+			text: '3m'
+		}, {
+			type: 'month',
+			count: 15,
+			text: '15m'
+		}, {
+			type: 'month',
+			count:30,
+			text: '30m'
+		}, {
+			type: 'day',
+			count: 1,
+			text: '1D'
+		}, {
+			type: 'weak',
+			count: 1,
+			text: '1W'
+		}, {
+			type: 'month',
+			count: 1,
+			text: '1M'
+		}, {
+			type: 'year',
+			count: 1,
+			text: '1Y'
+		}, {
+			type: 'all',
+			text: 'All'
+		}],
+        inputBoxBorderColor: 'gray',
+        inputBoxWidth: 120,
+        inputBoxHeight: 18,
+        inputStyle: {
+            color: '#039',
+            fontWeight: 'bold'
+        },
+        labelStyle: {
+            color: 'silver',
+            fontWeight: 'bold'
+        },
+        selected: 3
+    },
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
         yAxis: [{
             labels: {
                 align: 'left'
@@ -101,7 +189,7 @@ $.getJSON('https://stocks.myazure.org/json/aapl-ohlcv.json', function (data) {
         responsive: {
             rules: [{
                 condition: {
-                    maxWidth: 800
+                    maxWidth: 1920
                 },
                 chartOptions: {
                     rangeSelector: {
